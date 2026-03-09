@@ -1,6 +1,10 @@
 /* =========================================
    VARIABLES Y RESET
    ========================================= */
+
+/* AUTORES: 
+    Jessica Díaz Valle 22130834
+    Angel Jared Calvillo Valdez 21130927 */
 :root {
     --primary-color: #003b5c; /* Azul oscuro */
     --secondary-color: #cba052; /* Dorado/Arena */
@@ -176,4 +180,5 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: auto;
+
 }
