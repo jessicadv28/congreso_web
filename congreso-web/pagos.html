@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos - Congreso 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">TechCongreso '26</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="ponencias.html">Ponencias</a></li>
+                <li><a href="memoria.html">Memoria</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 style="text-align: center;">Pasarela de Pago</h2>
+        <p style="text-align: center;">Selecciona el paquete correspondiente a tu registro.</p>
+
+        <div class="grid-cards">
+            <div class="card" style="text-align: center; border-top: 4px solid var(--secondary-color);">
+                <h3>Pase Participante</h3>
+                <h2 style="color: #333; font-size: 2.5rem;">$500 MXN</h2>
+                <p>Acceso a todas las conferencias, constancia de asistencia y kit de bienvenida.</p>
+                <br>
+                <a href="index.html?pago=exito" class="btn" onclick="alert('Simulación: Pago procesado con éxito. Redirigiendo...');">Pagar con PayPal</a>
+            </div>
+
+            <div class="card" style="text-align: center; border-top: 4px solid var(--primary-color);">
+                <h3>Pase Ponente</h3>
+                <h2 style="color: #333; font-size: 2.5rem;">$1,200 MXN</h2>
+                <p>Revisión de artículo, publicación en memoria, tiempo de exposición y constancia curricular.</p>
+                <br>
+                <a href="index.html?pago=exito" class="btn" onclick="alert('Simulación: Pago procesado con éxito. Redirigiendo...');">Pagar con PayPal</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Congreso de Tecnología y Sistemas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

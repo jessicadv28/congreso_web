@@ -1,0 +1,179 @@
+/* =========================================
+   VARIABLES Y RESET
+   ========================================= */
+:root {
+    --primary-color: #003b5c; /* Azul oscuro */
+    --secondary-color: #cba052; /* Dorado/Arena */
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   UX/UI: TIPOGRAFÍA Y CONTENEDORES
+   ========================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h1, h2, h3 { color: var(--primary-color); margin-bottom: 1rem; }
+
+/* =========================================
+   NAVBAR (FLEXBOX)
+   ========================================= */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .logo { font-size: 1.5rem; font-weight: bold; color: var(--secondary-color); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--secondary-color); }
+
+/* =========================================
+   HERO BANNER (FLEXBOX)
+   ========================================= */
+.hero {
+    background: linear-gradient(rgba(0,59,92,0.8), rgba(0,59,92,0.8)), url('../img/banner.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 { color: var(--secondary-color); font-size: 3rem; }
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover { background-color: #e0b462; transform: translateY(-2px); }
+.btn-outline { background: transparent; border: 2px solid var(--secondary-color); color: var(--secondary-color); }
+
+/* =========================================
+   SISTEMA DE GRID (TARJETAS, PROGRAMA, ETC)
+   ========================================= */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+/* =========================================
+   FORMULARIOS Y FILTROS
+   ========================================= */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filters select, .filters input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+/* Campos ocultos por defecto (Se controlarán con JS en la sig unidad) */
+.conditional-field { display: block; /* Cambiar a 'none' cuando se use JS */ }
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-links { flex-direction: column; gap: 0.5rem; width: 100%; text-align: center; margin-top: 1rem;}
+    .hero h1 { font-size: 2rem; }
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}

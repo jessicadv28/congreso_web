@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Congreso 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">TechCongreso '26</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="ponencias.html">Ponencias</a></li>
+                <li><a href="memoria.html">Memoria</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Registro al Congreso</h2>
+        <p>Completa el formulario para iniciar tu proceso.</p>
+
+        <div class="card" style="max-width: 600px; margin: 2rem auto;">
+            <form action="pagos.html" method="GET">
+                
+                <div class="form-group">
+                    <label>Nombre Completo:</label>
+                    <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Correo Electrónico:</label>
+                    <input type="email" name="correo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipo de Participación:</label>
+                    <select name="tipo_usuario" id="tipo_usuario" required>
+                        <option value="">Selecciona una opción...</option>
+                        <option value="ponente">Ponente</option>
+                        <option value="participante">Participante</option>
+                    </select>
+                </div>
+
+                <div class="conditional-field" id="campos_ponente">
+                    <hr style="margin: 1.5rem 0; border-top: 1px solid #ccc;">
+                    <h3 style="font-size: 1.2rem;">Datos de la Ponencia (Solo Ponentes)</h3>
+                    <div class="form-group">
+                        <label>Título de la Ponencia:</label>
+                        <input type="text" name="titulo_ponencia">
+                    </div>
+                    <div class="form-group">
+                        <label>Resumen (Abstract):</label>
+                        <textarea name="resumen" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Área Temática:</label>
+                        <select name="area">
+                            <option value="ia">Inteligencia Artificial</option>
+                            <option value="ciberseguridad">Ciberseguridad</option>
+                            <option value="desarrollo">Desarrollo Web/Móvil</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="conditional-field" id="campos_participante">
+                    <hr style="margin: 1.5rem 0; border-top: 1px solid #ccc;">
+                    <h3 style="font-size: 1.2rem;">Datos de Asistencia (Solo Participantes)</h3>
+                    <div class="form-group">
+                        <label>Institución de Procedencia:</label>
+                        <input type="text" name="institucion">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de Asistencia:</label>
+                        <select name="modalidad">
+                            <option value="presencial">Presencial</option>
+                            <option value="virtual">Virtual (Streaming)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Ir a Pagar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Congreso de Tecnología y Sistemas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

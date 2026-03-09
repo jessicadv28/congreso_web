@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa - Congreso 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">TechCongreso '26</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="ponencias.html">Ponencias</a></li>
+                <li><a href="memoria.html">Memoria</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Programa del Evento</h2>
+        
+        <div class="filters">
+            <select><option>Todos los Días</option><option>Día 1 - 20 Oct</option><option>Día 2 - 21 Oct</option></select>
+            <select><option>Todos los Tipos</option><option>Magistral</option><option>Taller</option></select>
+            <select><option>Todas las Salas</option><option>Sala A (Sistemas)</option><option>Sala B (Redes)</option></select>
+        </div>
+
+        <div class="grid-cards" style="grid-template-columns: 1fr;">
+            <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <strong style="color: var(--secondary-color);">09:00 - 10:30 | Día 1 | Sala A</strong>
+                    <h3>El futuro del Desarrollo</h3>
+                    <p>Conferencia Magistral</p>
+                </div>
+            </div>
+            <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <strong style="color: var(--secondary-color);">11:00 - 13:00 | Día 1 | Sala B</strong>
+                    <h3>Taller de Ciberseguridad</h3>
+                    <p>Taller Práctico</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Congreso de Tecnología y Sistemas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
